@@ -21,9 +21,14 @@ export default function Login({ setLoggedInUser }) {
     })
   }
 
+  const charlie = () => {
+    setEmail("charlie@kelly.com")
+    setPassword("password")
+  }
+
   return (
     <div className="container" style={{ maxWidth: "500px" }}>
-      <h3>Login</h3>
+      <h3 onClick={charlie}>Login</h3>
       <FormGroup>
         <Label>Email</Label>
         <Input

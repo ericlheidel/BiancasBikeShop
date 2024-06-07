@@ -33,3 +33,13 @@ export const closeWorkOrder = (wo) => {
     body: JSON.stringify(wo),
   })
 }
+
+export const deleteIncompleteWorkOrder = (wo) => {
+  return fetch(`${_apiUrl}/${wo.id}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(wo),
+  })
+}
